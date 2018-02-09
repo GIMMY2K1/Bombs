@@ -1,0 +1,14 @@
+[Project]
+PBRManagerVersion=8.0
+ProjectName=bombs
+Application=
+OnePBR=Yes
+LibraryList=
+IncludeDWs=Yes
+VerifyFiles=Yes
+CreateEmptyPBRs=No
+PBRs=D:\Programming\PowerBuilder Projects\Games\Bombs\bombs.pbr
+
+[D:\Programming\PowerBuilder Projects\Games\Bombs\bombs.pbr]
+Data=d:\programming\powerbuilder projects\games\bombs<tab>bombs.pbl<tab>d_bombgrid<tab>1<newline>d:\programming\powerbuilder projects\games\bombs<tab>bombs.pbl<tab>d_test<tab>1
+

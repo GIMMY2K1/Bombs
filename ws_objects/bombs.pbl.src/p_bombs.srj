@@ -1,0 +1,19 @@
+﻿$PBExportHeader$p_bombs.srj
+EXE:d:\programming\powerbuilder projects\games\bombs\bombs.exe,d:\programming\powerbuilder projects\games\bombs\bombs.pbr,0,1
+CMP:0,0,0,2,0,0
+COM:BradjaSoft
+DES:Bombs Game
+CPY:2004 - 2005 BradjaSoft
+PRD:Bombs
+VER:1.0
+PBD:D:\Programming\PowerBuilder Projects\Games\Bombs\bombs.pbl,,0
+OBJ:d:\programming\powerbuilder projects\games\bombs\bombs.pbl,bombs,a
+OBJ:d:\programming\powerbuilder projects\games\bombs\bombs.pbl,d_bombgrid,d
+OBJ:d:\programming\powerbuilder projects\games\bombs\bombs.pbl,w_about,w
+OBJ:d:\programming\powerbuilder projects\games\bombs\bombs.pbl,d_halloffame,d
+OBJ:d:\programming\powerbuilder projects\games\bombs\bombs.pbl,w_entername,w
+OBJ:d:\programming\powerbuilder projects\games\bombs\bombs.pbl,f_center_window,f
+OBJ:d:\programming\powerbuilder projects\games\bombs\bombs.pbl,w_bombs,w
+OBJ:d:\programming\powerbuilder projects\games\bombs\bombs.pbl,w_halloffame,w
+OBJ:d:\programming\powerbuilder projects\games\bombs\bombs.pbl,m_bombs,m
+OBJ:d:\programming\powerbuilder projects\games\bombs\bombs.pbl,w_customgame,w

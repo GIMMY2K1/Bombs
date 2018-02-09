@@ -1,0 +1,21 @@
+﻿$PBExportHeader$f_center_window.srf
+global type f_center_window from function_object
+end type
+
+forward prototypes
+global subroutine f_center_window (window a_win)
+end prototypes
+
+global subroutine f_center_window (window a_win);environment env
+IF ( GetEnvironment(env) <> 1 ) THEN
+	MessageBox( "Application: Open", "Unable to get environment information.~nHalting ..." )
+	HALT
+END IF
+
+a_win.x = pixelstounits((env.Screenwidth - UnitsToPixels(a_win.width, XUnitsToPixels!)) / 2,xpixelstounits!) 
+a_win.y = pixelstounits((env.Screenheight - UnitsToPixels(a_win.height, YUnitsToPixels!)) / 2,ypixelstounits!)
+
+//a_win.x = pixelstounits((UnitsToPixels(w_main.width, XUnitsToPixels!) - UnitsToPixels(a_win.width, XUnitsToPixels!)) / 2,xpixelstounits!) 
+//a_win.y = pixelstounits((UnitsToPixels(w_main.height, YUnitsToPixels!) - UnitsToPixels(a_win.height, YUnitsToPixels!)) / 2,ypixelstounits!)
+end subroutine
+

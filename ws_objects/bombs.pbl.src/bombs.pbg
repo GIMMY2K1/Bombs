@@ -1,0 +1,18 @@
+﻿Save Format v3.0(19990112)
+@begin Libraries
+ "bombs.pbl" "";
+@end;
+@begin Objects 
+ "bombs.sra" "bombs.pbl";
+ "d_bombgrid.srd" "bombs.pbl";
+ "d_halloffame.srd" "bombs.pbl";
+ "d_test.srd" "bombs.pbl";
+ "f_center_window.srf" "bombs.pbl";
+ "p_bombs.srj" "bombs.pbl";
+ "m_bombs.srm" "bombs.pbl";
+ "w_about.srw" "bombs.pbl";
+ "w_bombs.srw" "bombs.pbl";
+ "w_customgame.srw" "bombs.pbl";
+ "w_entername.srw" "bombs.pbl";
+ "w_halloffame.srw" "bombs.pbl";
+@end;

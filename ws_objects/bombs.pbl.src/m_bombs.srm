@@ -1,0 +1,306 @@
+﻿$PBExportHeader$m_bombs.srm
+forward
+global type m_bombs from menu
+end type
+type m_game from menu within m_bombs
+end type
+type m_new from menu within m_game
+end type
+type m_line1 from menu within m_game
+end type
+type m_easy from menu within m_game
+end type
+type m_normal from menu within m_game
+end type
+type m_extreme from menu within m_game
+end type
+type m_custom from menu within m_game
+end type
+type m_line2 from menu within m_game
+end type
+type m_halloffame from menu within m_game
+end type
+type m_line3 from menu within m_game
+end type
+type m_exit from menu within m_game
+end type
+type m_game from menu within m_bombs
+m_new m_new
+m_line1 m_line1
+m_easy m_easy
+m_normal m_normal
+m_extreme m_extreme
+m_custom m_custom
+m_line2 m_line2
+m_halloffame m_halloffame
+m_line3 m_line3
+m_exit m_exit
+end type
+type m_help from menu within m_bombs
+end type
+type m_about from menu within m_help
+end type
+type m_help from menu within m_bombs
+m_about m_about
+end type
+global type m_bombs from menu
+m_game m_game
+m_help m_help
+end type
+end forward
+
+global type m_bombs from menu
+m_game m_game
+m_help m_help
+end type
+global m_bombs m_bombs
+
+on m_bombs.create
+m_bombs=this
+call super::create
+this.text = "m_bombs"
+this.m_game=create m_game
+this.m_help=create m_help
+this.Item[UpperBound(this.Item)+1]=this.m_game
+this.Item[UpperBound(this.Item)+1]=this.m_help
+end on
+
+on m_bombs.destroy
+call super::destroy
+destroy(this.m_game)
+destroy(this.m_help)
+end on
+
+type m_game from menu within m_bombs
+m_new m_new
+m_line1 m_line1
+m_easy m_easy
+m_normal m_normal
+m_extreme m_extreme
+m_custom m_custom
+m_line2 m_line2
+m_halloffame m_halloffame
+m_line3 m_line3
+m_exit m_exit
+end type
+
+on m_game.create
+call super::create
+this.text = "Game"
+this.m_new=create m_new
+this.m_line1=create m_line1
+this.m_easy=create m_easy
+this.m_normal=create m_normal
+this.m_extreme=create m_extreme
+this.m_custom=create m_custom
+this.m_line2=create m_line2
+this.m_halloffame=create m_halloffame
+this.m_line3=create m_line3
+this.m_exit=create m_exit
+this.Item[UpperBound(this.Item)+1]=this.m_new
+this.Item[UpperBound(this.Item)+1]=this.m_line1
+this.Item[UpperBound(this.Item)+1]=this.m_easy
+this.Item[UpperBound(this.Item)+1]=this.m_normal
+this.Item[UpperBound(this.Item)+1]=this.m_extreme
+this.Item[UpperBound(this.Item)+1]=this.m_custom
+this.Item[UpperBound(this.Item)+1]=this.m_line2
+this.Item[UpperBound(this.Item)+1]=this.m_halloffame
+this.Item[UpperBound(this.Item)+1]=this.m_line3
+this.Item[UpperBound(this.Item)+1]=this.m_exit
+end on
+
+on m_game.destroy
+call super::destroy
+destroy(this.m_new)
+destroy(this.m_line1)
+destroy(this.m_easy)
+destroy(this.m_normal)
+destroy(this.m_extreme)
+destroy(this.m_custom)
+destroy(this.m_line2)
+destroy(this.m_halloffame)
+destroy(this.m_line3)
+destroy(this.m_exit)
+end on
+
+event selected;m_easy.checked   =(parentwindow.dynamic wf_getgametype()=1)
+m_normal.checked =(parentwindow.dynamic wf_getgametype()=2)
+m_extreme.checked=(parentwindow.dynamic wf_getgametype()=3)
+m_custom.checked =(parentwindow.dynamic wf_getgametype()=0)
+
+end event
+
+type m_new from menu within m_game
+end type
+
+on m_new.create
+call super::create
+this.text = "New~tF2"
+this.shortcut = 113
+end on
+
+on m_new.destroy
+call super::destroy
+end on
+
+event clicked;parentwindow.dynamic wf_populate_grid()
+end event
+
+type m_line1 from menu within m_game
+end type
+
+on m_line1.create
+call super::create
+this.text = "-"
+end on
+
+on m_line1.destroy
+call super::destroy
+end on
+
+type m_easy from menu within m_game
+end type
+
+on m_easy.create
+call super::create
+this.text = "Easy"
+end on
+
+on m_easy.destroy
+call super::destroy
+end on
+
+event clicked;parentwindow.dynamic wf_setgame(1)
+end event
+
+type m_normal from menu within m_game
+end type
+
+on m_normal.create
+call super::create
+this.text = "Normal"
+this.checked = true
+end on
+
+on m_normal.destroy
+call super::destroy
+end on
+
+event clicked;parentwindow.dynamic wf_setgame(2)
+end event
+
+type m_extreme from menu within m_game
+end type
+
+on m_extreme.create
+call super::create
+this.text = "Extreme"
+end on
+
+on m_extreme.destroy
+call super::destroy
+end on
+
+event clicked;parentwindow.dynamic wf_setgame(3)
+end event
+
+type m_custom from menu within m_game
+end type
+
+on m_custom.create
+call super::create
+this.text = "Custom"
+end on
+
+on m_custom.destroy
+call super::destroy
+end on
+
+event clicked;parentwindow.dynamic wf_setgame(0)
+end event
+
+type m_line2 from menu within m_game
+end type
+
+on m_line2.create
+call super::create
+this.text = "-"
+end on
+
+on m_line2.destroy
+call super::destroy
+end on
+
+type m_halloffame from menu within m_game
+end type
+
+event clicked;open(w_halloffame)
+end event
+
+on m_halloffame.create
+call super::create
+this.text = "Hall Of Fame"
+end on
+
+on m_halloffame.destroy
+call super::destroy
+end on
+
+type m_line3 from menu within m_game
+end type
+
+on m_line3.create
+call super::create
+this.text = "-"
+end on
+
+on m_line3.destroy
+call super::destroy
+end on
+
+type m_exit from menu within m_game
+end type
+
+on m_exit.create
+call super::create
+this.text = "Exit"
+end on
+
+on m_exit.destroy
+call super::destroy
+end on
+
+event clicked;close(parentwindow)
+end event
+
+type m_help from menu within m_bombs
+m_about m_about
+end type
+
+on m_help.create
+call super::create
+this.text = "Help"
+this.m_about=create m_about
+this.Item[UpperBound(this.Item)+1]=this.m_about
+end on
+
+on m_help.destroy
+call super::destroy
+destroy(this.m_about)
+end on
+
+type m_about from menu within m_help
+end type
+
+on m_about.create
+call super::create
+this.text = "About"
+end on
+
+on m_about.destroy
+call super::destroy
+end on
+
+event clicked;open(w_about)
+end event
+
