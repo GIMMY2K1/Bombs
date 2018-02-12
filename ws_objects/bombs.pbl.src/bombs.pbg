@@ -12,7 +12,6 @@
  "m_bombs.srm" "bombs.pbl";
  "w_about.srw" "bombs.pbl";
  "w_bombs.srw" "bombs.pbl";
- "w_cancellami.srw" "bombs.pbl";
  "w_customgame.srw" "bombs.pbl";
  "w_entername.srw" "bombs.pbl";
  "w_halloffame.srw" "bombs.pbl";
