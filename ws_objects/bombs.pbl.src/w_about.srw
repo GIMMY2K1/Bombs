@@ -135,8 +135,8 @@ boolean focusrectangle = false
 end type
 
 type cb_2 from commandbutton within w_about
-integer x = 567
-integer y = 280
+integer x = 329
+integer y = 284
 integer width = 512
 integer height = 92
 integer taborder = 50
