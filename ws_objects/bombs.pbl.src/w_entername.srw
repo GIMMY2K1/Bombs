@@ -56,7 +56,7 @@ event closequery;if not canclose then return 1
 end event
 
 type cb_1 from commandbutton within w_entername
-integer x = 809
+integer x = 823
 integer y = 148
 integer width = 357
 integer height = 80
