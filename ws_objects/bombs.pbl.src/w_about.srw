@@ -20,7 +20,7 @@ global type w_about from window
 integer width = 1125
 integer height = 408
 windowtype windowtype = response!
-long backcolor = 67108864
+long backcolor = 255
 string icon = "DosEdit5!"
 p_1 p_1
 st_3 st_3
